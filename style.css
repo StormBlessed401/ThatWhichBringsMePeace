@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 25px;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    /* background: repeating-linear-gradient(#faf8f2); */
+    background-color: #faf8f2;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center; 
+}
+
+ #title{
+     text-decoration: underline;
+    font-family: serif;
+}
+
+/* #subtitle{
+    margin-top: -20px;
+    font-family: "Poppins";
+    font-style: italic;
+
+}  */
+#subtitle {
+    margin-top: -20px;
+    font-family: "Poppins";
+    font-style: italic;
+    color: #4d4444;
+
+    text-shadow:
+        0 0 3px rgba(0,0,0,0.15),
+        0 0 6px rgba(0,0,0,0.10);
+    transition: text-shadow 0.4s ease;
+}
+
+#subtitle:hover {
+    text-shadow:
+    0 0 6px rgba(0,0,0,0.25),
+    0 0 10px rgba(0,0,0,0.15);
+}
+
+.showcase {
+  background-color: beige;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 100px); /* 2 rows */
+  min-height: 700px;
+  row-gap: 200px;
+  justify-items: center;
+}
+
+.image{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 8px 16px rgba(166, 37, 37, 0.07);
+    border: 2px solid rgb(252, 242, 242);
+
+}
+.image:hover {
+    background-size: cover;
+    transform: scale(1.01);
+}
+.one{
+    background-image: url('wildflowers.jpeg');
+}
+
+.two{
+    background-image: url('nightSky.jpeg');
+
+}
+
+.three{
+    background-image: url('hutAtTheEdgeOfMountain.jpeg');
+}
+
+.four{
+    background-image: url('grassSwayingInWind.jpeg');
+}
+
+.five{
+    background-image: url('Floral Bookmarks .jpeg');
+}
+
+.six{
+    background-image: url('Halloween Cat.jpeg');
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(114, 106, 106, 0.7);
+  color: #50041b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  padding: 10px;
+  font-family: "Poppins";
+  font-style: bold;
+  font-size: larger;
+
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+.soundOfSilence{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 245, 220, 0.758);
+    justify-content: center;
+    align-items: center;
+}
+
+.soundOfSilence p {
+    width: 900px;
+  padding: 3rem 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  background: #f4f1ea;
+  transition: background 0.3s;
+}
+
+.soundOfSilence p:nth-child(even) {
+  background: #e8e4da;
+}
+
+.soundOfSilence p span {
+  transition: opacity 0.3s;
+}
+
+.soundOfSilence p .background {
+  opacity: 0;
+  /* position: absolute; */
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.soundOfSilence p:hover .foreground {
+  opacity: 0;
+}
+
+.soundOfSilence p:hover .background {
+  opacity: 1;
+}
